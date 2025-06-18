@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1>Top 5 Recommendations</h1>
+    <ul>
+        {% for laptop in results %}
+            <li>{{ laptop.brand }} {{ laptop.model }} - Score: {{ '%.2f'|format(laptop.score) }}</li>
+        {% endfor %}
+    </ul>
+    <img src="{{ url_for('static', filename='plots/brands.png') }}" alt="Brand Popularity">
+</body>
+</html>
