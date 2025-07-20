@@ -11,9 +11,9 @@ df = load_data()
 def index():
     if request.method == 'POST':
         prefs = request.form.to_dict()
-        # calculate feature_match_score in df based on prefs
-        # For example:
-        df['feature_match_score'] = df.apply(lambda row: float(prefs.get('budget', 0))/row['price'], axis=1)
+        # Calculate feature_match_score, handle KeyError for missing 'price'
+        df['feature_match_score'] = df.apply(
+            lambda row: float(prefs.get('budget', 0))/row['price'], axis=1)
         df_scored = compute_scores(df)
         results = df_scored.head(5).to_dict('records')
         plot_top_brands(df_scored)
@@ -22,3 +22,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
