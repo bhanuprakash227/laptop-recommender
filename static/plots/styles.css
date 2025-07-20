@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #b9efff 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    border-radius: 14px;
+    padding: 2rem 2.5rem;
+    margin: 4rem auto;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(44, 110, 215, 0.10);
+}
+
+h1, h2 {
+    color: #2242db;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+label, input, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+input, select {
+    padding: 0.7em;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    background: #f5faff;
+}
+
+button {
+    background: #4db4ff;
+    color: #fff;
+    border: none;
+    padding: 0.9em 2.2em;
+    border-radius: 6px;
+    font-size: 1.07rem;
+    font-weight: bold;
+    box-shadow: 0 2px 14px #4db4ff44;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2257f8;
+}
+
+.result-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-list li {
+    background: #e8f3fe;
+    margin: 0.6em 0;
+    padding: 1em 1.5em;
+    border-radius: 7px;
+    box-shadow: 0 1px 4px #c0e8ff55;
+    font-size: 1.08em;
+}
