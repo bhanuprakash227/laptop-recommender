@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
@@ -9,3 +12,4 @@ def plot_top_brands(df, top_n=10, save_path="static/plots/brands.png"):
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.savefig(save_path)
+
